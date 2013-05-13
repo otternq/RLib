@@ -1,5 +1,3 @@
-source("utils.r")
-
 mean <- function(l) {
     sum <- 0
 
