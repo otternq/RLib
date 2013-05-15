@@ -3,5 +3,5 @@ test.combinations <- function () {
 }
 
 test.permutations <- function () {
-    checkEquals( permutations(10, 3), 720, "Basic Combination")
+    checkEquals( permutations(10, 3), 720, "Basic Permutations")
 }
