@@ -1,5 +1,3 @@
-source("utils.r")
-
 mean <- function(l) {
     sum <- 0
 
@@ -33,7 +31,8 @@ mode <- function(l) {
     char <- l[1]
 
     #the list of modes
-    sameList = list(char)
+    sameList = list()
+    sameList[[1]] = char;
 
     curLen <- 1
 
@@ -48,7 +47,7 @@ mode <- function(l) {
                 char <- l[i - 1]
                 sameList <- list(char)
             } else if (curLen == max) {
-                sameList <- c(sameList, l[i - 1])
+                sameList[[1]][[length(sameList[[1]]) + 1]] <- l[i-1]
             }
 
             curLen <- 1
@@ -64,10 +63,11 @@ mode <- function(l) {
         char <- l[i - 1]
         sameList <- list(char)
     } else if (curLen == max) {
-        sameList <- c(sameList, l[i - 1])
+        #sameList <- c(sameList, l[[i-1]])
+        sameList[[1]][[length(sameList[[1]]) + 1]] <- l[i-1]
     }
 
-    return(sameList)
+    return(sameList[[1]])
 }
 
 variance <- function(l) {
