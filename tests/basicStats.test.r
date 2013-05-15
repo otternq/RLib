@@ -12,7 +12,6 @@ test.mode <- function() {
     checkEquals(mode(c(1,1,2,2,3,3)), c(1,2,3), "Multi mode works")
 }
 
-test.deactivation <- function()
-{
+test.deactivation <- function() {
   DEACTIVATED('Deactivating this test function')
 }
