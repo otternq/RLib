@@ -8,7 +8,8 @@ test.median <- function() {
 
 test.mode <- function() {
     checkTrue( mode(c(1,2,2)) == c(2), "Basic mode works")
-    checkTrue( mode(c(1,1,2,2)) == list(1, 2), "Multi mode works")
+    
+    checkEquals(mode(c(1,1,2,2,3,3)), c(1,2,3), "Multi mode works")
 }
 
 test.deactivation <- function()
