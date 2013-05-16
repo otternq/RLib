@@ -76,7 +76,9 @@ variance <- function(l) {
     sum <- 0
 
     for (i in l) {
-        sum <- sum + ((i - listAverage) ^ 2)
+        partial <- ((i - listAverage) ^ 2)
+
+        sum <- sum + partial
     }
 
     return(sum / (length(l) - 1))
