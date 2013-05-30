@@ -1,6 +1,8 @@
 library('RUnit')
+source("./src/inputs.r")
 source("./src/utils.r")
-source('./src/basicStats.R')
+source('./src/average.r')
+source('./src/counting.r')
  
 test.suite <- defineTestSuite("Basic Stats",
                               dirs = file.path("tests"),
